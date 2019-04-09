@@ -50,3 +50,24 @@ middleImage2.addEventListener('dblclick', function(event) {
     middleImage1.setAttribute("src", "img/fun.jpg");
   }
 });
+
+
+
+const buttons = document.querySelectorAll(".btn");
+buttons.forEach( btn => {
+  btn.addEventListener("mouseenter", function(event) {
+    btn.style["background-color"] = "purple";
+  });
+  btn.addEventListener("mouseleave", function(event) {
+    btn.style["background-color"] = "hotpink";
+  });
+});
+
+const navItems = document.querySelectorAll("a");
+
+// prevent refresh
+navItems.forEach( element => {
+  element.addEventListener("click", function(event) {
+    event.preventDefault()
+  });
+});
