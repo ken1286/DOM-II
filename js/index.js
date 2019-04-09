@@ -71,3 +71,13 @@ navItems.forEach( element => {
     event.preventDefault()
   });
 });
+
+const bottomImage = document.querySelector(".content-destination img");
+
+window.addEventListener("keydown", function(event) {
+  bottomImage.setAttribute("style", "opacity: 0.5;");
+});
+
+window.addEventListener("keyup", function(event) {
+  bottomImage.setAttribute("style", "opacity: 1;");
+});
